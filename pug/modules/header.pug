@@ -1,0 +1,108 @@
+header.header
+    .header-fixed
+        a.header-fixed__logo(href="#")
+            img(src="img/svgSprite/logo.svg" alt="logo")
+        nav.main-menu
+            ul
+                li
+                    a(href="#") О санатории
+                li.current.dropdown
+                    a(href="#") Лечение
+                    ul.submenu
+                        li
+                            a(href="#") Общетерапевтическая путевка
+                        li.dropdown
+                            a(href="#") Лечение заболеваний органов пищеварения и язвы
+                            ul.submenu-child
+                                li
+                                    a(href="#") Общетерапевтическая путевка
+                                li
+                                    a(href="#") Лечение сахарного диабета
+                                li
+                                    a(href="#") Лечение ожирения и коррекция
+                        li
+                            a(href="#") Лечение сахарного диабета
+                        li
+                            a(href="#") Лечение ожирения и коррекция веса
+                li
+                    a(href="#") Проживание
+                li
+                    a(href="#") Цены
+                li
+                    a(href="#") Питание
+                li
+                    a(href="#") Досуг
+                li
+                    a(href="#") Мать и дитя
+                li
+                    a(href="#") Новости
+                li
+                    a(href="#") Контакты
+
+        a.header-fixed__phone(href="tel:+78793443463") +7 (87934) <span class="bold">4-34-63</span>
+        a.header-fixed__btn(href="#") Забронировать путевку
+        a.mobile-menu-toggle(href="#main-menu")
+            span.hamburger
+
+    .header-top
+        a.blind-toggle(href="#")
+            +icon('zoom-in','')
+            | Версия для слабовидящих
+    .header-middle
+        .header-middle__container
+            .header-logo__wrapper
+                a.header__logo(href="#")
+                    img(src="img/svgSprite/logo.svg" alt="logo")
+                .header__descriptor Официальный сайт санатория <span class="header__address">   |    г. Ессентуки, ул. Пушкина, 22</span>
+                    .header__name Базовый клинический санаторий «Виктория»
+            a.header__faq(href="#")
+                +icon('question')
+                | Вопрос-ответ
+            a.header__phone(href="tel:+78793443463") +7 (87934) <span class="bold">4-34-63</span>
+            a.header__btn(href="#") Забронировать путевку
+            a.mobile-menu-toggle(href="#main-menu")
+                span.hamburger
+    nav.main-menu#main-menu
+        ul
+            li
+                a(href="#") О санатории
+            li.current.dropdown
+                a(href="#") Лечение
+                ul.submenu
+                    li
+                        a(href="#") Общетерапевтическая путевка
+                    li.dropdown
+                        a(href="#") Лечение заболеваний органов пищеварения и язвы
+                        ul.submenu-child
+                            li
+                                a(href="#") Общетерапевтическая путевка
+                            li
+                                a(href="#") Лечение сахарного диабета
+                            li
+                                a(href="#") Лечение ожирения и коррекция
+                    li
+                        a(href="#") Лечение сахарного диабета
+                    li
+                        a(href="#") Лечение ожирения и коррекция веса
+            li
+                a(href="#") Проживание
+            li
+                a(href="#") Цены
+            li
+                a(href="#") Питание
+            li
+                a(href="#") Досуг
+            li
+                a(href="#") Мать и дитя
+            li
+                a(href="#") Новости
+            li
+                a(href="#") Контакты
+
+.fixed-sidebtn
+    a.fixed-sidebtn__btn(href="#")
+        +icon('photo-camera','')
+        | Фото
+    a.fixed-sidebtn__btn(href="https://youtu.be/MATh7iPzTgU" data-fancybox="video1")
+        +icon('play-button','')
+        | Видео

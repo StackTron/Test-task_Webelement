@@ -1,0 +1,39 @@
+-
+    var treatment = [
+        {'name': 'Общетерапевтическая путёвка','icon':'stethoscope_slim'},
+    {'name': 'Свободное дыхание','icon':'nose'},
+    {'name': 'Пиелонефрит, цистит. Мочекаменая болезнь','icon':'kidneys'},
+    {'name': 'Здоровые сосуды','icon':'heart'},
+    {'name': 'Лечение ЖКТ','icon':'stomach'},
+    {'name': 'Лечение легких','icon':'lung'},
+    {'name': 'Мужское здоровье','icon':'mars'},
+    {'name': 'Ищемическая болезнь сердца','icon':'cardiogram'},
+    {'name': 'Сахарный диабет','icon':'bloodtest'},
+    {'name': 'Миома матки, эндомитриоз','icon':'uterus'},
+    {'name': 'Лечение псориаза. Здоровая кожа','icon':'bee'},
+    {'name': 'Здоровый позвоночник','icon':'spin'},
+    {'name': 'Коррекция веса','icon':'scales'},
+    {'name': 'Женское бесплодие','icon':'femenine'},
+    {'name': 'Гипертоническая болезь','icon':'psychology'},
+    {'name': 'Оздоровительная путевка','icon':'pharmacy_tool'}
+    ]
+section.treatment-programs
+    .container
+        .treatment-programs__title-row
+            h2 Лечебные программы санатория
+            .subtitle.
+                Большая медицинская база. На базе санатория функционируют
+                16 лечебно-диагностических отделений и 6 общекурортных
+        .treatment-programs__list
+            +TreatmentList(treatment)
+        .treatment-programs__bottom
+            a.treatment-link-style-1(href="#")
+                .treatment-link__title
+                    +icon('motherhood','')
+                    | Отделение «Мать и дитя»
+                img(src="img/content/banner-sm-1.jpg" alt="image")
+            a.treatment-link-style-2(href="#")
+                .treatment-link__title
+                    +icon('health-care','')
+                    | Лечебная база и курортные факторы
+                img(src="img/content/banner-sm-2.jpg" alt="image")

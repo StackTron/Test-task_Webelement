@@ -1,0 +1,115 @@
+.filter {
+	display: inline-flex;
+	background-image: linear-gradient(to top, $icon-gradient-from 0%, #42a6c5 100%);
+	border-radius: 50px;
+    padding: 8px 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 38px;
+  @include mq('tablet-small','max') {
+    overflow-y: scroll;
+    width: 100%;
+  }
+	a {
+		display: inline-block;
+		font-size: 16px;
+		font-weight: $fw-n;
+		line-height: 11px;
+		letter-spacing: -0.08px;
+    	color: $white;
+    	border-bottom: 1px dashed #7ac6ed;
+    	margin: 0 60px;
+    	transition: .5s ease 0s;
+      @include mq('desktop','max') {
+        margin: 0 30px;
+      }
+      @include mq('laptop','max') {
+        margin: 0 15px;
+      }
+    	&:hover {
+    		border-bottom: 0;
+    		color: #e4f7fd;
+
+    	}
+		&.active {
+			border-radius: 50px;
+			padding: 12px 66px;
+			color: #1d4399;
+			font-weight: $fw-m;
+			box-shadow: inset 0 2px 1px rgba(35, 35, 35, 0.06);
+			background-color: #e4f7fd;
+			border-bottom: 0;
+			margin: 0;
+          @include mq('laptop','max') {
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+		}
+	}
+}
+
+.gallery-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -5px;
+  @include mq('phone','max') {
+    margin: 0;
+    justify-content: center;
+  }
+}
+.gallery-item {
+	display: inline-block;
+	max-width: 287px;
+	margin: 0 4px 8px;
+	position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .5s ease 0s;
+  @include mq('desktop','max') {
+    max-width: calc(25% - 8px);
+  }
+  @include mq('laptop','max') {
+    max-width: calc(33.3333% - 8px);
+  }
+  @include mq('tablet-small','max') {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+    img {
+    	border-radius: 15px;
+    }
+    &:before {
+      content: '';
+      background-image: linear-gradient(to top, rgba(0, 40, 138, 0.5) 0%, rgba(31, 70, 154, 0.5) 100%);
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      transition: .5s ease 0s;
+      opacity: 0;
+    }
+    &:after {
+      content: '';
+      background: url(../img/svgSprite/zoom_arrow-w.svg) no-repeat 0 0/contain;
+      width: 28px;
+      height: 28px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+      transition: .5s ease 0s;
+      opacity: 0;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+      &:before {
+        opacity: 1;
+      }
+    }
+}

@@ -1,0 +1,39 @@
+//===========//
+//MIXIN FONTS
+//===========//
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf) {
+	$src: null;
+
+	$extmods: (
+					eot: "?"
+	);
+
+	$formats: (
+					otf: "opentype",
+					ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+        font-display: auto;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+
+@include font-face("GothamPro", '../fonts/GothamPro/GothamPro', 400, normal);
+@include font-face("GothamPro", '../fonts/GothamPro/GothamPro-Light', 300, normal);
+@include font-face("GothamPro", '../fonts/GothamPro/GothamPro-Bold', 700, normal);
+@include font-face("GothamPro", '../fonts/GothamPro/GothamPro-Medium', 500, normal);
+@include font-face("GothamPro", '../fonts/GothamPro/GothamPro-Italic', 400, italic);
+
+
+@include font-face("ALSRubl", '../fonts/ALSRubl/ALSRubl', normal, normal);

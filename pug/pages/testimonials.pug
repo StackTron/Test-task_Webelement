@@ -1,0 +1,43 @@
+extends ../layout/layout
+
+block title
+    | Отзывы
+
+block content
+    main
+        .title-row
+            .container
+                ul.breadcrubs
+                    li
+                        a(href="#") Главная
+                    li Отзывы
+                h1.title-row__title Самые ценные отзывы
+        .container
+            .testimonial-slider
+                - for(var i=0; i<5; i++)
+                    .testimonial-slide
+                        .testimonial-slide__txt.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
+                        .testimonial-slide__name Иванов Иван Иванович
+                        .testimonial-slide__city г. Москва
+        .about-list.about-list--bg
+            a.about-list__item(href="#")
+                .about-list__img
+                    img(src="img/content/preim1.jpg" alt="image")
+                .about-list__name Территория санатория - 22 ГА дендрологического парка
+            a.about-list__item(href="#")
+                .about-list__img
+                    img(src="img/content/preim2.jpg" alt="image")
+                .about-list__name Крупнейшая в Европе питьевая галерея на территории
+            a.about-list__item(href="#")
+                .about-list__img
+                    img(src="img/content/preim3.jpg" alt="image")
+                .about-list__name Собственная водолечебница. 5 отделений, бассейн и 19 видов ванн
+            a.about-list__item(href="#")
+                .about-list__img
+                    img(src="img/content/preim4.jpg" alt="image")
+                .about-list__name Центр иммунологических и генетических исследований
+            a.about-list__item(href="#")
+                .about-list__img
+                    img(src="img/content/preim5.jpg" alt="image")
+                .about-list__name Лицензии и сертификаты по 103 видам медицинской деятельности

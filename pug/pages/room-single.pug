@@ -1,0 +1,107 @@
+extends ../layout/layout
+
+block title
+		| Главная страница
+
+block content
+		main
+			.title-row
+				.container
+					ul.breadcrubs
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Проживание	
+						li 2-местный «Стандарт»
+					h1.title-row__title 2-местный «Стандарт»
+					a.title-row__btn-border(href="#") Назад в номера
+			.room-wrapper
+				.container
+					.room-row
+						.room-gallery
+							.room-gallery__big
+								a(href="img/content/room-big-1.jpg" data-fancybox="room-gallery")
+									img(src="img/content/room-big-1.jpg" alt="image")
+								a(href="img/content/room-big-1.jpg" data-fancybox="room-gallery")
+									img(src="img/content/room-big-1.jpg" alt="image")
+								a(href="img/content/room-big-1.jpg" data-fancybox="room-gallery")
+									img(src="img/content/room-big-1.jpg" alt="image")
+								a(href="img/content/room-big-1.jpg" data-fancybox="room-gallery")
+									img(src="img/content/room-big-1.jpg" alt="image")
+							.room-gallery__sm
+									img(src="img/content/room-sm-1.jpg" alt="image")
+									img(src="img/content/room-sm-1.jpg" alt="image")
+									img(src="img/content/room-sm-1.jpg" alt="image")
+									img(src="img/content/room-sm-1.jpg" alt="image")
+						.room-info
+								.room-info__inner
+									.room-info__title
+										h4 Основное место<br>в номере
+										.room-info__price-title Цена за сутки
+									.room-info__price-row
+										.room-info__price-name с 12 марта 2018 по 3 июня 2018 
+										.room-info__price-number 3 400 <span class="ruble">c</span>
+									.room-info__price-row
+										.room-info__price-name с 12 марта 2018 по 3 июня 2018 
+										.room-info__price-number 2 400 <span class="ruble">c</span>	
+									.room-info__price-row
+										.room-info__price-name с 12 марта 2018 по 3 июня 2018 
+										.room-info__price-number 3 500 <span class="ruble">c</span>
+									.room-info__title.mt-30 Оздоровительная путевка<br>(питание + проживание)
+									.room-info__price-row
+										.room-info__price-name с 12 марта 2018 по 3 июня 2018 
+										.room-info__price-number 3 400 <span class="ruble">c</span>
+									.room-info__price-row
+										.room-info__price-name с 12 марта 2018 по 3 июня 2018 
+										.room-info__price-number 2 400 <span class="ruble">c</span>	
+									.room-info__price-row
+										.room-info__price-name с 12 марта 2018 по 3 июня 2018 
+										.room-info__price-number 3 500 <span class="ruble">c</span>
+									.room-info__btn
+										a.btn.btn--red(href="#") Забронировать
+					.room-facilities
+						.room-facilities__area--light-blue
+							.room-facilities__title В номере:
+							.room-facilities__list
+								span.room-facilities__item
+									+icon('bath','')
+									|туалет, ванна
+								span.room-facilities__item
+									+icon('fax','')
+									|телефон
+								span.room-facilities__item
+									+icon('safe-box','')
+									|сейф
+								span.room-facilities__item
+									+icon('electric-iron','')
+									|гладильная доска
+								span.room-facilities__item
+									+icon('tv','')
+									|телевизор
+								span.room-facilities__item
+									+icon('refrigerator','')
+									|холодильник
+								span.room-facilities__item
+									+icon('kettle','')
+									|чайник
+						.room-facilities__area--blue
+							.room-facilities__list
+								span.room-facilities__item
+									+icon('duster','')
+									|Уборка ежедневная
+								span.room-facilities__item
+									+icon('towel','')
+									|Смена белья 1 раз в 5 дней
+			.others-rooms
+				.container
+					.others-rooms__title Другие номера корпуса <span class="build-number">№1</span>
+					.others-rooms__list
+						a.others-rooms__item(href="#")
+							img(src="img/content/room-add-1.jpg" alt="image")
+							.others-rooms__name 2-местный «Стандарт» <span class="others-rooms__price">от 2 300 <span class="ruble">c</span></span>
+						a.others-rooms__item(href="#")
+							img(src="img/content/room-add-2.jpg" alt="image")
+							.others-rooms__name 2-местный «Стандарт» <span class="others-rooms__price">от 2 300 <span class="ruble">c</span></span>
+						a.others-rooms__item(href="#")
+							img(src="img/content/room-add-3.jpg" alt="image")
+							.others-rooms__name 2-местный 2-комнатный «Стандарт» <span class="others-rooms__price">от 2 300 <span class="ruble">c</span></span>

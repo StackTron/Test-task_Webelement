@@ -1,0 +1,61 @@
+// examples for usage
+// @include inlineblock (middle)
+// @extend %clearfix
+
+// Sprite
+// display: inline-block
+// @include sprite($s-profle)
+
+// Function convert px to rem
+// font-size: rem(18)
+
+
+//mixin convert pixel to rem
+$baseFontSize: 16;
+
+
+//mixins for png sprite
+@mixin sprite-width($sprite) {
+	width: nth($sprite, 5)
+}
+
+@mixin sprite-height($sprite) {
+	height: nth($sprite, 6)
+}
+
+@mixin sprite-position($sprite) {
+	$sprite-offset-x: nth($sprite, 3); $sprite-offset-y: nth($sprite, 4);
+	background-position: $sprite-offset-x $sprite-offset-y
+}
+
+@mixin sprite-image($sprite) {
+	$sprite-image: nth($sprite, 9);
+	background-image: url(../img/pngSprite/#{$sprite-image})
+}
+
+@mixin sprite($sprite) {
+	@include sprite-image($sprite);
+	@include sprite-position($sprite);
+	@include sprite-width($sprite);
+	@include sprite-height($sprite)
+}
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+//breakpoints
+$breakpoints: (
+        "phone":   481px,
+        "tablet-small": 601px,
+        "tablet":       800px,
+        "laptop":      992px,
+        "desktop":      1200px,
+);

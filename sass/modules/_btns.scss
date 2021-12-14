@@ -1,0 +1,69 @@
+/*btns*/
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.7rem;
+  transition: .4s ease 0s;
+  &.btn--red {
+    background-image: linear-gradient(to top, #f82d2d 0%, #ff4949 100%);
+    color: #fff;
+    padding: 14px 25px;
+    &:hover {
+      background-image: linear-gradient(to top, #00288a 0%, #1f469a 100%);
+    }
+  }
+  &.btn--blue {
+    background-image: linear-gradient(to top, #00288a 0%, #1f469a 100%);
+    color: #fff;
+    padding: 14px 36px;
+    &:hover {
+      background-image: linear-gradient(to top, #f82d2d 0%, #ff4949 100%);
+    }
+  }
+  &.btn-top-icon {
+    border: 1px solid $white;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: $fw-n;
+    color: $white;
+    padding: 7px 14px 7px 21px;
+    .icon {
+      fill: $white;
+      font-size: 1.9rem;
+      margin-right: 9px;
+      transition: .4s ease 0s;
+    }
+    &:hover {
+      background: $white;
+      color: #1d4399;
+      .icon {
+        fill: #1d4399;
+      }
+
+    }
+  }
+}
+.btn-group {
+  margin-bottom: 50px;
+  .btn {
+    margin: 0 7px;
+    padding-left: 40px;
+    padding-right: 40px;
+    &:first-child {
+      margin-left: 0;
+    }
+    @include mq('tablet-small','max') {
+      margin: 0 0 15px;
+      width: 200px;
+    }
+  }
+  @include mq('tablet-small','max') {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}

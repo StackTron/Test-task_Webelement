@@ -1,0 +1,68 @@
+extends ../layout/layout
+
+block title
+		| Главная страница
+
+block content
+		main
+			.title-row
+				.container
+						ul.breadcrubs
+								li
+										a(href="#") Главная
+								li Галерея
+						h1.title-row__title Галерея
+			.content
+				.container
+					.text__center
+						.filter
+							a(href="#") Территория
+							a.active(href="#") Номера
+							a(href="#") Досуг
+							a(href="#") Услуги
+							a(href="#") Лечебный корпус
+					.gallery-list
+						a.gallery-item(href="img/content/ig-1.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-1.jpg" alt="image")
+						a.gallery-item(href="img/content/ig-2.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-2.jpg" alt="image")
+						a.gallery-item(href="img/content/ig-3.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-3.jpg" alt="image")
+						a.gallery-item(href="img/content/ig-4.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-4.jpg" alt="image")
+						a.gallery-item(href="img/content/ig-1.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-1.jpg" alt="image")
+						a.gallery-item(href="img/content/ig-2.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-2.jpg" alt="image")
+						a.gallery-item(href="img/content/ig-3.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-3.jpg" alt="image")
+						a.gallery-item(href="img/content/ig-4.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-4.jpg" alt="image")
+						a.gallery-item(href="img/content/ig-1.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-1.jpg" alt="image")
+						a.gallery-item(href="img/content/ig-2.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-2.jpg" alt="image")
+						a.gallery-item(href="img/content/ig-3.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-3.jpg" alt="image")
+						a.gallery-item(href="img/content/ig-4.jpg" data-fancybox="inner-gallery")
+								img(src="img/content/ig-4.jpg" alt="image")
+					.pagination.text__center
+						ul
+							li.prev.dissabled
+								a(href="#")
+									+icon('left-arrow','')
+							li
+								a(href="#") 1
+							li.current
+								a(href="#") 2
+							li
+								a(href="#") 3
+							li
+								a(href="#") ...
+							li
+								a(href="#") 8
+							li
+								a(href="#") 9
+							li.next
+								a(href="#")
+									+icon('left-arrow','')

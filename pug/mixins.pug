@@ -1,0 +1,12 @@
+mixin icon(name,mod)
+    - mod = mod || ''
+    svg(class="icon icon-" + name + ' ' + mod)
+        use(xlink:href="#" + name)
+    //- +icon('instagram', 'instagram')
+
+
+mixin TreatmentList(item)
+    each items in item
+        a.treatment-programs__item(href="#")
+            +icon(items.icon,'')
+            = items.name

@@ -1,0 +1,212 @@
+extends ../layout/layout
+
+block title
+    | Главная страница
+
+block content
+    main
+        .title-row
+            .container
+                ul.breadcrubs
+                    li
+                        a(href="#") Главная
+                    li
+                        a(href="#") Лечение
+                    li Лечение ЖКТ
+                .d-flex.align-center
+                    .title-row__col
+                        h1.title-row__title Лечение ЖКТ
+                        .title-row__subtitle.
+                            Программа разработана для реабилитации и восстановительного лечения природными и преформированными факторами лечения пациентов с заболеваниями внутренних органов.
+                    .title-row__col
+                        .title-row__price от <b>2 578</b> <span class="ruble">c</span>/сутки
+                        .title-row__btn
+                            a.btn.btn-top-icon(href="#")
+                                +icon('newspaper','')
+                                | Смотреть полный прайс
+        .container
+            .content-row
+                .content.content-with-sidebar
+                    .d-flex
+                        div.mr-30
+                            h4 Показания
+                            ul.bullet
+                                li хронические гастродуодениты
+                                li язвенная болезнь желудка и 12-перстной кишки
+                                li болезни желчевыводящих путей
+                                li хронические гепатиты
+                                li хронические панкреатиты
+                                li синдром раздраженного кишечника.
+                        .direction-program
+                            .direction-program__title Руководитель программы
+                            .direction-program__name Кузьменко<br>Ольга Николаевна
+                            .direction-program__post врач-гастроэнтеролог высшей категории.
+                    .lead
+                        h4 Ожидаемый эффект:
+                        p.
+                            снижение частоты и длительности рецидивов заболеваний,
+                            снижение тяжести течения, уменьшение продолжительности
+                            пребывания на больничном листе, уменьшение затрат на медикаментозное лечение,
+                            урежение госпитализации, профилактика осложнений,
+                            поддержание оптимального качества жизни.
+                    h3 Какие процедуры входят в путевку?
+                    .table-wrapper
+                        table
+                            tr
+                                th
+                                th на 14 дней
+                                th на 18 дней
+                                th на 21 дней
+                            tr
+                                td Приём лечащего врача
+                                td 1
+                                td 2
+                                td 1
+                            tr
+                                td Приём лечащего повторный
+                                td 1
+                                td 2
+                                td 1
+                            tr
+                                td Приём минеральной воды
+                                td ежедневно
+                                td ежедневно
+                                td ежедневно
+                            tr
+                                td Приём лечащего врача
+                                td 1
+                                td 1
+                                td 1
+                            tr
+                                td Приём лечащего врача
+                                td 2
+                                td 1
+                                td 1
+                            tr
+                                td Приём лечащего врача
+                                td 1
+                                td 1
+                                td 1
+                    .btn-group
+                        a.btn.btn--blue(href="#") Узнать цены
+                        a.btn.btn--red(href="#") Забронировать
+                    p.
+                        Заболевания желудочно-кишечного тракта – следствие малоподвижного суетного образа жизни и постоянных стрессов. Слишком большой круг обязанностей на работе и дома, постоянный цейтнот времени приводят к питанию всухомятку, «на ходу», к выбору фаст-фуда, что чревато развитием энтероколита, холецистита, панкреатита, гастрита. Без лечения острая форма постепенно преобразуется в хроническую. Поэтому так важно вовремя пройти профилактику даже здоровым на первый взгляд людям.
+                aside.sidebar
+                    .sidebar__menu
+                        .sidebar__menu-title Лечебно-оздоровительные программы
+                        ul.sidebar__menu-list
+                            li.current
+                                a(href="#") Лечение ЖКТ
+                            li
+                                a(href="#") Заболевания легких, лечение легких
+                            li
+                                a(href="#") Лечение эндометриоза и миомы матки
+                        .sidebar__menu-bottom
+                            a(href="#") Лечебная база и курортные факторы
+                            a(href="#") Показания и противопоказания
+                            a(href="#") Платные медицинские услуги
+                    a.sidebar__rooms(href="#")
+                        .sidebar__rooms-img
+                            img(src="img/content/side-room.jpg" alt="image")
+                        .sidebar__rooms-btn
+                            span.btn.btn--blue
+                                +icon('king-bed','')
+                                |Номера
+                    a.sidebar__excursion(href="#")
+                        .sidebar__excursion-img
+                            img(src="img/content/side-excursion.jpg" alt="image")
+                        .sidebar__excursion-content
+                            .sidebar__excursion-title Экскурсии по Северному Кавказу
+                            span.btn.btn--blue Подробнее
+                    a.sidebar__info(href="#")
+                        .sidebar__info-img
+                            img(src="img/content/side-info.jpg" alt="image")
+                        .sidebar__info-content
+                            .sidebar__info-title Вам будет интересно
+                            .sidebar__info-txt Досуг в санатории Виктория
+            .container
+                .inner-gallery
+                    div
+                        a(href="img/content/ig-1.jpg" data-fancybox="inner-gallery")
+                            img(src="img/content/ig-1.jpg" alt="image")
+                    div
+                        a(href="img/content/ig-2.jpg" data-fancybox="inner-gallery")
+                            img(src="img/content/ig-2.jpg" alt="image")
+                    div
+                        a(href="img/content/ig-3.jpg" data-fancybox="inner-gallery")
+                            img(src="img/content/ig-3.jpg" alt="image")
+                    div
+                        a(href="img/content/ig-4.jpg" data-fancybox="inner-gallery")
+                            img(src="img/content/ig-4.jpg" alt="image")
+                    div
+                        a(href="img/content/ig-2.jpg" data-fancybox="inner-gallery")
+                            img(src="img/content/ig-4.jpg" alt="image")
+        .others-programs
+            .container
+                h2 Другие программы
+                ul.treatment-list
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Общетерапевтическая путевка
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение заболеваний органов пищеварения и язвы
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение сахарного диабета
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение ожирения и коррекция веса
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Свободное дыхание
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Заболевания легких, лечение легких
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение эндометриоза и миомы матки
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение бесплодия и хронических заболеваний матки
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Пиелонефрит, цистит. Мочекаменная болезнь
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Простатит. Эректильная дисфункция
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение псориаза. Программа «Здоровая кожа»
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Гипертоническая болезнь
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Ишемическая болезнь сердца
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Здоровые сосуды
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Здоровый позвоночник
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Оздоровительная путевка

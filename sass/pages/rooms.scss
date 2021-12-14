@@ -1,0 +1,193 @@
+.living-block {
+  position: relative;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  @include mq('laptop','max') {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    @include mq('laptop','max') {
+      align-items: flex-start;
+    }
+    @include mq('laptop','max') {
+      flex-direction: column;
+    }
+  }
+  &__title {
+    font-size: 3rem;
+    line-height: 2.404rem;
+    white-space: nowrap;
+    margin-bottom: 5px;
+    margin-top: 17px;
+    @include mq('tablet-small','max') {
+      font-size: 2.4rem;
+
+    }
+  }
+  .build-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top, $icon-gradient-from 0%, $icon-gradient-to 100%);
+    box-shadow: 0 0.6rem 1.5rem rgba(62, 160, 195, 0.25);
+    width: 52px;
+    height: 52px;
+    color: $white;
+    font-size: 2.4rem;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: $fw-m;
+  }
+  &__info {
+    font-size: 1.4rem;
+    line-height: 2.014rem;
+    color: #666;
+    span {
+      display: inline-block;
+      position: relative;
+      &:after {
+        content: '•';
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 4px;
+      }
+      &:last-of-type:after {
+        display: none;
+      }
+    }
+  }
+  &__desc {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 12px;
+  }
+  &__feauteres {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    border-radius: 8px;
+    padding: 17px 0;
+    @include mq('tablet','max') {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 1.5rem;
+      line-height: 2.7rem;
+      color: #2d2d2d;
+      @include mq('laptop','max') {
+        line-height: 2rem;
+
+      }
+      li {
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mq('laptop','max') {
+          justify-content: flex-start;
+          align-items: flex-start;
+          margin-bottom: 10px;
+          padding: 0 15px;
+        }
+      }
+    }
+    .icon {
+      fill:  #2a84b8;
+      font-size: 1.7rem;
+      margin-right: 7px;
+    }
+  }
+  &__feauteres--title {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: $fw-b;
+    padding: 0 30px;
+    @include mq('laptop','max') {
+      padding: 0 15px;
+      margin-bottom: 20px;
+    }
+  }
+  img {
+    transition: .4s ease 0s;
+  }
+  &__item {
+    position: relative;
+    padding: 0 15px;
+    transition: .4s ease 0s;
+    &:hover {
+      img {
+        opacity: .7;
+      }
+      .living-block__name {
+        box-shadow: 0 0.6rem 1.5rem rgba(62, 160, 195, 0.25);
+      }
+    }
+  }
+  &__name {
+    position: absolute;
+    background: $white;
+    border-radius: 50px;
+    font-size: 2.1rem;
+    line-height: 2rem;
+    text-align: center;
+    bottom: 25px;
+    left: 70px;
+    right: 70px;
+    padding: 11px;
+    transition: .4s ease 0s;
+    @include mq('laptop','max') {
+      left: 30px;
+      right: 30px;
+      font-size: 1.6rem;
+    }
+  }
+  &__price {
+    color: #2b85b9;
+    white-space: nowrap;
+  }
+  &__slider {
+    margin: 0 -15px;
+    .slick-arrow {
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      top: calc(50% - 28px);
+      font-size: 0;
+      border: 0;
+      background: url("../img/svgSprite/left-arrow-b.svg") no-repeat 0 0/contain;
+      z-index: 999;
+      transition: .4s ease 0s;
+      @include mq('tablet-small','max') {
+        width: 28px;
+        height: 28px;
+        top: calc(50% - 14px);
+
+      }
+      &:hover {
+        opacity: .7;
+      }
+    }
+    .slick-prev {
+      @include mq('desktop','max') {
+        left: 0;
+      }
+      left: -54px;
+    }
+    .slick-next {
+      right: -54px;
+      transform: scale(-1,1);
+      @include mq('desktop','max') {
+        right: 0;
+      }
+    }
+
+  }
+}

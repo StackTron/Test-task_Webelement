@@ -1,0 +1,21 @@
+section.main-slider
+    .js-main-slider
+        -for(var i =0; i<2; i++)
+            .main-slider__item(style="background: url(img/content/main-slide-1.jpg) no-repeat center center/cover")
+                .main-slider__content
+                    .main-slider__content-inner
+                        .main-slider_txt-wrapper
+                            .main-slider__title Крупнейшая в Европе питьевая галерея на территории санатория
+                            .main-slider__desc.
+                                Аэрокриотерапия - уникальная медицинская
+                                методика омолаживания человеческого организма
+                                с помощью низких температур в криосауне.
+                        a.main-slider_btn(href="#") Узнать больше
+            .main-slider__item(style="background: url(img/content/main-slide-2.jpg) no-repeat center center/cover")
+                .main-slider__content
+                    .main-slider__content-inner
+                        .main-slider_txt-wrapper
+                            .main-slider__title Крупнейшая в Европе питьевая галерея на территории санатория
+                        a.main-slider_btn(href="#") Узнать больше
+    .mouse-scroll
+        +icon('mouse_scroll', '')

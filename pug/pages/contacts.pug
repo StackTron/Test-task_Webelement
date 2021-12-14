@@ -1,0 +1,119 @@
+extends ../layout/layout
+
+block title
+    | Главная страница
+
+block content
+    main
+        .title-row
+            .container
+                ul.breadcrubs
+                    li
+                        a(href="#") Главная
+                    li Контакты
+                h1.title-row__title Контакты
+        .content
+            .container
+                .contacts-row.d-flex
+                    .contacts-col
+                        .contacts-card.contacts-card--grey
+                            h3.contacts-card__title Отдел бронирования санаторно-курортных путевок
+                            .contacts-card__row
+                                a.contacts-card__phone(href="tel:+78793467762") +7 (87934) <b>6-77-62</b>,
+                                a.contacts-card__phone(href="tel:+78793462696") <b>6-26-96</b>
+                            .contacts-card__row
+                                a.contacts-card__phone(href="tel:+78793443463") +7 (87934) <b>4-34-63</b> <span>(доб. 10039, 10041, 10043)</span>
+                            .contacts-card__row
+                                a.contacts-card__email(href="mailto:viktoria_srp@profkurort.ru")
+                                    +icon('envelope','')
+                                    |viktoria_srp@profkurort.ru
+                            .contacts-card__timetable
+                                +icon('time','')
+                                |Режим работы отдела:<br>пн.-пт. с 8:00 до 16:00
+                    .contacts-col.d-flex
+                        .contacts-card
+                            h3.contacts-card__title Касса платных медуслуг
+                            p Узнать цены, записаться к врачам и на мед. процедуры
+                            a.contacts-card__phone(href="tel:+78793464169") +7 (87934) <b>6-41-69</b>
+                            .contacts-card__timetable
+                                +icon('time','')
+                                |Пн.-Пт. с 8:00 до 18:00<br>Сб. с 8:00 до 15:00
+                        .contacts-card
+                            h3.contacts-card__title Лечебный корпус
+                            a.contacts-card__phone(href="tel:+78793465410") +7 (87934) <b>6-54-10</b>
+                            .contacts-card__timetable
+                                +icon('time','')
+                                |Пн.-Пт. с 7:30 до 16:00<br>Сб. с 7:30 до 13:00
+                .map-row
+                    .address-block
+                        .address-block__title Адрес санатория
+                        | 357600, Ставропольский край,
+                        | г. Ессентуки, ул. Пушкина, 22                    
+                    .map#map
+                .way-row
+                    h2 Как добраться?
+                    .d-flex
+                        .tabs-wrapper
+                            .tabs
+                                nav.transformer-tabs(role='navigation')
+                                    ul
+                                        li
+                                            a.active(href="#tab-1")
+                                                +icon('airplane','')
+                                                |Из аэропорта
+                                        li
+                                            a(href="#tab-2")
+                                                +icon('train','')
+                                                |Ж/Д вокзал
+                                        li
+                                            a(href="#tab-3")
+                                                +icon('bus','')
+                                                |Автовокзал
+                                .tab-item.active#tab-1.
+                                    От аэропорта Минеральные Воды до ж/д станции Минеральные Воды городским
+                                    транспортом, далее до ж/д станции Ессентуки, далее маршрутным такси
+                                    № 3, 7, 12, 14 до остановки "Виктория".
+                                .tab-item#tab-2.
+                                    От жд вокзала Минеральные Воды до ж/д станции Минеральные Воды городским
+                                    транспортом, далее до ж/д станции Ессентуки, далее маршрутным такси
+                                    № 3, 7, 12, 14 до остановки "Виктория".
+                                .tab-item#tab-3.
+                                    От автовокзала Минеральные Воды до ж/д станции Минеральные Воды городским
+                                    транспортом, далее до ж/д станции Ессентуки, далее маршрутным такси
+                                    № 3, 7, 12, 14 до остановки "Виктория".
+                        .contacts-info
+                            +icon('info','')
+                            |Услуги трансфера оказываются
+                            |только при групповых заездах
+                            |по льготным путевкам на основании
+                            |заявки, сделанной ФСС.
+                .cooperation-row
+                    h2 Сотрудничество
+                    .cooperation
+                        a.cooperation-item(href="#")
+                            .cooperation-item__title ВНИМАНИЮ ТУРФИРМ
+                            .cooperation-item__txt Условия сотрудничества
+                        a.cooperation-item(href="#")
+                            .cooperation-item__title ВНИМАНИЮ ПРОФСОЮЗОВ
+                            .cooperation-item__txt Льготные путевки в санаторий членам профсоюзов (ФНПР)
+                        a.cooperation-item(href="#")
+                            .cooperation-item__title ВНИМАНИЮ ЮР. ЛИЦ, ИП
+                            .cooperation-item__txt Порядок бронирования путевок банковские реквизиты
+                .callback
+                    h3.callback__title По вашим вопросам пишите
+                    form
+                        .form-group-row
+                            .form-group
+                                input.form-control(type="text", name="callback-name" placeholder="Ваше Имя*")
+                                .form-error Это поле обязательно для заполнения
+                            .form-group
+                                input.form-control(type="tel", name="callback-phone" placeholder="+_(___) ___-__-__*")
+                                .form-error Это поле обязательно для заполнения
+                        .form-group
+                            textarea.form-control(name="callback-message" placeholder="Ваш вопрос")
+                        .form-group.text__center.form-group--submit
+                            input.form-submit(type="submit" value="Отправить")
+                        .form-group.form-group--checkbox
+                            input(type="checkbox" name="callback-policy" id="callback-policy" checked required)
+                            label(for="callback-policy") Я <a href="#">согласен</a> на обработку персональных данных
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=4f117bb6-2fe3-48da-8b5c-e6baa6263784")

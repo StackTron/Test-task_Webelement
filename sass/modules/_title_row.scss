@@ -1,0 +1,94 @@
+.title-row {
+  background-image: linear-gradient(to top,$icon-gradient-from 0%, #42a6c5 100%);
+  color: $white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  @include mq('tablet-small','max') {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    .d-flex {
+      flex-wrap: wrap;
+    }
+  }
+  &__btn-border {
+    display: inline-block;
+    color: $white;
+    font-size: 1.2rem;
+font-weight: $fw-b;
+line-height: 2.4rem;
+text-transform: uppercase;
+border: 0.1rem solid #bde9f5;
+padding: 8px 16px;
+border-radius: 4px;
+transition: .4s ease 0s;
+&:hover {
+  background: $white;
+  color: #2983b8;
+  border-color: #2983b8;
+  }
+}
+}
+.title-row__title {
+  font-size: 3.6rem;
+  line-height: 4.8rem;
+  font-weight: $fw-n;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  @include mq('tablet-small','max') {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+.title-row__subtitle {
+  font-size: 1.6rem;
+  line-height: 2.401rem;
+  margin-bottom: 7px;
+  max-width: 800px;
+}
+.breadcrubs {
+  display: flex;
+  margin-bottom: 20px;
+  overflow: hidden;
+  a {
+    display: inline-block;
+    padding-right: 21px;
+    color: $white;
+    font-size: 1.3rem;
+    line-height: 2.401rem;
+    text-decoration: underline;
+    text-decoration-color: rgba($white,.5);
+    position: relative;
+    &:hover {
+      text-decoration: none;
+    }
+    &:before {
+      content: '•';
+      position: absolute;
+      right: 9px;
+      top: 0;
+    }
+  }
+  li {
+    color: $white;
+    font-size: 1.3rem;
+    line-height: 2.401rem;
+    white-space: nowrap;
+    &:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  }
+}
+.title-row__price {
+  color: $white;
+  font-size: 3rem;
+  line-height: 2.4rem;
+  white-space: nowrap;
+  margin-bottom: 36px;
+}
+.title-row__col {
+  max-width: 800px;
+  margin-right: 30px;
+}

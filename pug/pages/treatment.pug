@@ -1,0 +1,132 @@
+extends ../layout/layout
+
+block title
+    | Главная страница
+
+block content
+    main
+        .title-row
+            .container
+                ul.breadcrubs
+                    li
+                        a(href="#") Главная
+                    li Лечение
+                h1.title-row__title Лечение
+                .title-row__subtitle.
+                    Небольшой вступительный текст о широких возможностях лечения и оздоровления, врачах и оборудовании. А таже о чудесном климате и водолечении.
+        .content
+            .treatment-wrapper
+                h2 Лечебно-оздоровительные программы
+                ul.treatment-list
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Общетерапевтическая путевка
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение заболеваний органов пищеварения и язвы
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение сахарного диабета
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение ожирения и коррекция веса
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Свободное дыхание
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Заболевания легких, лечение легких
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение эндометриоза и миомы матки
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение бесплодия и хронических заболеваний матки
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Пиелонефрит, цистит. Мочекаменная болезнь
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Простатит. Эректильная дисфункция
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Лечение псориаза. Программа «Здоровая кожа»
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Гипертоническая болезнь
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Ишемическая болезнь сердца
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Здоровые сосуды
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Здоровый позвоночник
+                    li
+                        a.treatment-item(href="#")
+                            +icon('stethoscope_slim','')
+                            span Оздоровительная путевка
+            .treatment-base-wrapper
+                .container
+                    h2 Лечебная база и курортные факторы
+                    .treatment-base
+                        a.treatment-base__item(href="#")
+                            .treatment-base__img
+                                img(src="img/content/tr-base-1.jpg" alt="image")
+                            .treatment-base__name Минеральные воды. Питьевая галерея.
+                        a.treatment-base__item(href="#")
+                            .treatment-base__img
+                                img(src="img/content/tr-base-2.jpg" alt="image")
+                            .treatment-base__name Бальнеолечение. Водолечебница санатория
+                        a.treatment-base__item(href="#")
+                            .treatment-base__img
+                                img(src="img/content/tr-base-3.jpg" alt="image")
+                            .treatment-base__name Радонотерапия
+                        a.treatment-base__item(href="#")
+                            .treatment-base__img
+                                img(src="img/content/tr-base-4.jpg" alt="image")
+                            .treatment-base__name Грязелечение
+                        a.treatment-base__item(href="#")
+                            .treatment-base__img
+                                img(src="img/content/tr-base-5.jpg" alt="image")
+                            .treatment-base__name Центр иммунохимических и генетических исследований
+                        a.treatment-base__item(href="#")
+                            .treatment-base__img
+                                img(src="img/content/tr-base-6.jpg" alt="image")
+                            .treatment-base__name Центр по лечению заболеваний органов дыхания и слуха
+                        a.treatment-base__item(href="#")
+                            .treatment-base__img
+                                img(src="img/content/tr-base-7.jpg" alt="image")
+                            .treatment-base__name Гинекологическое отделение
+                        a.treatment-base__item(href="#")
+                            .treatment-base__img
+                                img(src="img/content/tr-base-8.jpg" alt="image")
+                            .treatment-base__name Урологическое отделение
+                    .text__center.btn-row
+                        a.btn.btn--blue(href="#") Смотреть все
+            .instructions
+                .container
+                    a.instructions-item.instructions-item--white(href="#")
+                        .instructions-item__name Показания<br>и противопоказания
+                        .instructions-item__img
+                            img(src="img/content/instructions-1.jpg" alt="image")
+                    a.instructions-item.instructions-item--blue(href="#")
+                        .instructions-item__name Перечень платных медуслуг
+                        .instructions-item__img
+                            img(src="img/content/instructions-2.jpg" alt="image")

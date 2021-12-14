@@ -1,0 +1,198 @@
+.complex-map {
+  padding-top: 34px;
+  h2 {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    font-weight: $fw-n;
+    max-width: 810px;
+    margin: 0 auto 34px;
+    text-align: center;
+    @include mq('tablet-small','max') {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+  }
+}
+.complex-map-container {
+  position: relative;
+  text-align: center;
+}
+.complex-map__modal {
+  display: none;
+}
+.point {
+  position: absolute;
+  top: 0;
+  &.point-1 {
+    top: 20%;
+    left: 18%;
+  }
+  &.point-2 {
+    top: 18%;
+    left: 40%;
+  }
+  &.point-3 {
+    top: 25%;
+    right: 10%;
+  }
+  &.point-4 {
+    right: 10%;
+    top: 57%;
+  }
+  button {
+    border: 0.4rem solid rgba(255, 255, 255, 0.9);
+    background-color: #000000;
+    background-image: linear-gradient(to top, $icon-gradient-from 0%, $icon-gradient-to 100%);
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    font-weight: $fw-b;
+    color: $white;
+    border-radius: 25px;
+    position: relative;
+    padding: 0 18px 0 38px;
+    @include mq('tablet-small','max') {
+    font-size: 0;
+      width: 3rem;
+      height: 3rem;
+      padding: 0;
+  }
+    &:hover {
+      background: $white;
+      color: #1d4399;
+    }
+    &:before {
+      content: '+';
+      position: absolute;
+      left: 9px;
+      font-size: 2.4rem;
+      font-weight: 400;
+      @include mq('tablet-small','max') {
+        top: -5px;
+        left: 4px;
+      }
+
+    }
+  }
+}
+.complex-map__zoom {
+  width: 15.3rem;
+  position: absolute;
+  top: 90px;
+  right: calc(50% - 585px);
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to top, #f2f2f2 0%, $white 100%);
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  font-weight: $fw-m;
+  text-transform: uppercase;
+  padding: 10px 20px 8px 60px;
+  text-align: left;
+  border-radius: 8px;
+  @include mq('desktop','max') {
+  right: 20px;
+    top: 20px;
+}
+  @include mq('tablet-small','max') {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin-top: 20px;
+    display: inline-block;
+    width: auto;
+  }
+  &:hover {
+    .icon {
+      transform: scale(-1.2,1.2);
+    }
+  }
+  .icon {
+    font-size: 2.4rem;
+    fill: url(#linear-gradient-blue);
+    transform: scale(-1, 1);
+    position: absolute;
+    left: 22px;
+    top: 15px;
+    transition: .4s ease 0s;
+    @include mq('tablet-small','max') {
+      top: 5px;
+    }
+  }
+}
+.complex-map__modal {
+  position: absolute;
+  border-radius: 10px;
+  max-width: 480px;
+  width: 480px;
+  padding: 20px 10px 25px 25px;
+  background-image: linear-gradient(to top, #f2f2f2 0%, #f9f9f9 100%);
+  right: 0;
+  left: 0;
+  z-index: 999;
+  @include mq('tablet','max') {
+    max-height: 300px;
+    overflow-y: auto;
+    width: 240px;
+    left: 0;
+    right: 0;
+  }
+  ul {
+    column-count: 2;
+    column-width: auto;
+    @include mq('tablet','max') {
+      column-count: 1;
+    }
+    li {
+      text-align: left;
+      position: relative;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      padding-left: 15px;
+      a {
+        &:hover {
+          color: $icon-gradient-from;
+        }
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        border: 7px solid transparent;
+        border-left: 7px solid #2a84b9;
+        left: 0;
+        top: 2px;
+      }
+    }
+  }
+}
+.complex-map-modal {
+  padding: 0;
+  display: none;
+}
+.complex-map-modal .fancybox-button.fancybox-close-small{
+  width: auto;
+  display: block;
+  opacity: 1;
+  &::before{
+    content: "На сайт";
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 45px;
+    background-image: linear-gradient(to top,#00288a 0,#1f469a 100%);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.901rem;
+    font-weight: 700;
+    color: #fcfcfc;
+    margin: 12px 44px;
+    padding: 0 30px;
+  }
+  &:active{
+    outline: none;
+  }
+  svg{
+    display: none;
+  }
+}

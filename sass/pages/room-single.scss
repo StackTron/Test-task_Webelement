@@ -1,0 +1,328 @@
+.room-wrapper {
+	padding-top: 50px;
+	padding-bottom: 90px;
+	margin-top: -40px;
+	background: url('../img/content/room-bg.jpg') no-repeat center center/cover;
+}
+.room-row {
+	display: flex;
+	margin: 0 -15px;
+	@include mq('laptop','max') {
+		flex-wrap: wrap;
+		margin: 0;
+	}
+
+}
+.room-gallery {
+	max-width: (100%/12)*8;
+	flex-basis: (100%/12)*8;
+	padding: 0 15px;
+  @include mq('desktop','max') {
+    max-width: (100%/12)*7;
+    flex-basis: (100%/12)*7;
+  }
+  @include mq('laptop','max') {
+  	max-width: 100%;
+  	flex-basis: 100%;
+  	padding: 0;
+  }
+
+	&__big {
+		img {
+			border-radius: 15px;
+		}
+	}
+	&__sm {
+		margin-top: 7px;
+		img {
+			margin: 0 3px;
+			border-radius: 8px;
+			border: 0.2rem solid transparent;
+			cursor: pointer;
+		}
+		.slick-current {
+			border: 0.2rem solid #42a6c5;
+		}
+	}
+	.slick-arrow {
+		position: absolute;
+		width: 54px;
+		height: 54px;
+		top: calc(50% - 28px);
+		background: url(../img/svgSprite/left-arrow-w.svg) no-repeat 0 0/contain;
+		z-index: 99;
+		font-size: 0;
+		border: 0;
+        transition: .4s ease 0s;
+        &:hover {
+          background: url(../img/svgSprite/left-arrow-b.svg) no-repeat 0 0/contain;
+        }
+	}
+	.slick-next {
+		right: 0;
+		transform: scale(-1,1);
+	}
+	.slick-prev {
+		left: 0;
+	}
+}
+.room-info {
+	max-width: (100%/12)*4;
+	flex-basis: (100%/12)*4;
+	padding: 0 15px;
+  @include mq('desktop','max') {
+    max-width: (100%/12)*5;
+    flex-basis: (100%/12)*5;
+  }
+  @include mq('laptop','max') {
+  	max-width: 100%;
+  	flex-basis: 100%;
+  	margin-top: 30px;
+  	padding: 0;
+  }
+	&__inner {
+		background-color: $white;
+		border-radius: 10px;
+		padding: 32px;
+	}
+	&__title {
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.5rem;
+		font-weight: $fw-b;
+		line-height: 2.1rem;
+		
+    margin-bottom: 8px;
+    h4 {
+    	margin: 0;
+    }
+	}
+	&__price-title {
+		font-size: 1.2rem;
+		font-weight: $fw-m;
+		line-height: 1.601rem;
+		max-width: 67px;
+	}
+	&__price-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #e8e8e8;
+		padding-bottom: 8px;
+    margin-bottom: 10px;
+	}
+	&__price-name {
+		font-size: 1.4rem;
+		line-height: 2rem;
+	}
+	&__price-number {
+		font-size: 1.6rem;
+		font-weight: $fw-b;
+		line-height: 2.2rem;
+		color: #42a5c5;
+        white-space: nowrap;
+	}
+	&__btn {
+		text-align: center;
+		margin-top: 24px;
+	}
+}
+.room-facilities {
+	display: flex;
+	border-radius: 15px;
+	overflow: hidden;
+	color: $white;
+	margin-top: 36px;
+	@include mq('tablet-small','max') {
+		flex-wrap: wrap;
+
+	}
+	&__title {
+		font-size: 1.6rem;
+		font-weight: $fw-m;
+		line-height: 2.208rem;
+		flex: 0 0 auto;
+		margin-right: 38px;
+		@include mq('laptop','max') {
+			margin-bottom: 10px;
+		}
+
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__area--light-blue {
+		background-color: #44a9c8;
+		display: flex;
+		flex-grow: 1;
+		padding: 26px 37px;
+		max-width: 800px;
+		@include mq('laptop','max') {
+			padding: 26px 15px;
+			flex-wrap: wrap;
+		}
+		@include mq('tablet-small','max') {
+			width: 100%;
+		}
+		.room-facilities__item {
+			display: inline-block;
+			font-size: 1.3rem;
+			line-height: 1.5rem;
+			letter-spacing: 0.013rem;
+			padding-left: 25px;
+			position: relative;
+			margin-right: 25px;
+    		max-width: 120px;
+    		margin-bottom: 7px;
+            @include mq('desktop','max') {
+              margin-right: 20px;
+            }
+            @include mq('tablet-small','max') {
+            	margin-right: 10px;
+            	margin-bottom: 20px;
+            	max-width: none;
+            }
+			.icon {
+				position: absolute;
+				font-size: 2rem;
+				fill: $white;
+				left: 0;
+			}
+		}
+	}
+	&__area--blue {
+		background: #1f469a url("../img/general/pattern-2.jpg") repeat ;
+		width: 370px;
+		padding: 0 0 0 37px;
+		align-items: center;
+    	display: flex;
+      @include mq('desktop','max') {
+        padding-left: 15px;
+      }
+      @include mq('laptop','max') {
+      	width: auto;
+      }
+      @include mq('tablet-small','max') {
+      	width: 100%;
+      	padding: 15px;
+      }
+		.room-facilities__item {
+			display: inline-block;
+			font-size: 1.6rem;
+			letter-spacing: 0.016rem;
+			line-height: 2rem;
+			padding-left: 25px;
+			position: relative;
+			max-width: 140px;
+			margin-right: 15px;
+            @include mq('desktop','max') {
+              margin-right: 3px;
+              font-size: 1.3rem;
+            }
+            @include mq('laptop','max') {
+            	margin-right: 0;
+            	margin-bottom: 8px;
+            }
+            @include mq('tablet-small','max') {
+            	max-width: none;
+            }
+			.icon {
+				position: absolute;
+				font-size: 2rem;
+				fill: #44a9c8;
+				left: 0;
+			}
+		}
+	}
+  .icon-duster {
+    transform: scale(-1,-1);
+  }
+}
+
+.others-rooms {
+	background-color: #44a9c8;
+	padding-top: 77px;
+	padding-bottom: 90px;
+	@include mq('laptop','max') {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.build-number {
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top, $icon-gradient-from 0%, $icon-gradient-to 100%);
+    box-shadow: 0 0.6rem 1.5rem rgba(62, 160, 195, 0.25);
+    width: 41px;
+    height: 41px;
+    color: $white;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: $fw-m;
+	}
+	img {
+		border-radius: 10px;
+        transition: .4s ease 0s;
+	}
+	&__title {
+		font-size: 2rem;
+		color: $white;
+		margin-bottom: 27px;
+	}
+	&__list {
+		display: flex;
+		margin: 0 -15px;
+		@include mq('tablet-small','max') {
+			margin: 0;
+			flex-wrap: wrap;
+		}
+	}
+	&__item {
+		padding: 0 15px;
+		position: relative;
+		@include mq('tablet-small','max') {
+			padding: 0;
+			margin-bottom: 15px;
+		}
+      &:hover {
+        img {
+          opacity: .7;
+        }
+        .others-rooms__name {
+          box-shadow: 0 6px 15px rgba(62, 160, 195, 0.25);
+        }
+      }
+	}
+	&__name {
+		position: absolute;
+		background: $white;
+		border-radius: 50px;
+		bottom: 21px;
+	    left: 38px;
+	    right: 38px;
+	    padding: 8px 20px;
+	    text-align: center;
+	    line-height: 2.2rem;
+        transition: .4s ease 0s;
+        @include mq('laptop','max') {
+        	left: 20px;
+        	right: 20px;
+        	font-size: 1.4rem;
+        	line-height: 2rem;
+        	padding: 5px;
+        	bottom: 10px;
+        }
+        @include mq('tablet-small','max') {
+        	font-size: 1.6rem;
+        	line-height: 2.2rem;
+        	bottom: 21px;
+        }
+	}
+	&__price {
+		font-weight: $fw-b;
+		color: #2b85b9;
+		white-space: nowrap;
+	}
+}
